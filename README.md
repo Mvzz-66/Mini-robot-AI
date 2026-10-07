@@ -2,7 +2,7 @@
 
 ### **Gruppo Skynet** <br>
 
-#### Obbiettivo: creare un piccolo compagno AI con cui chiacchierare. <br>
+### Obbiettivo: creare un piccolo compagno AI con cui chiacchierare. <br>
 
 Questo repository contiene il codice sorgente e la documentazione.
 <br> <br>
