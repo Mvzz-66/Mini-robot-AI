@@ -11,5 +11,5 @@ Questo repository contiene il codice sorgente e la documentazione.
 | :--- | :--- | :--- |
 Capo Gruppo:  |   **Massimiliano Drago** | *Sviluppatore Software/Hardware* <br> 
 Componente 1:     |   **Diego Scatizzi** | *Sviluppatore Software/Hardware* <br>
-Componente 2:     |   **Niccolò Sbragi** | *Sviluppatore Software/Hardware e Designer* <br>
+Componente 2:     |   **Niccolò Sbragi** | *`Sviluppatore Eiaculatore Software/Hardware e Designer* <br>
 Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* <br>
