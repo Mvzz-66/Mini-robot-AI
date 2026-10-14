@@ -4,7 +4,7 @@
 
 ### Obbiettivo: creare un piccolo compagno AI con cui chiacchierare. <br>
 
-Questo repository contiene il codice sorgente e la documentazione..
+Questo repository contiene il codice sorgente e la documentazione.
 <br> <br>
 
 | Ruolo | Nome | Responsabilità |
