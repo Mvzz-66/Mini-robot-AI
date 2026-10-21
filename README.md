@@ -14,14 +14,14 @@ Componente 1:     |   **Diego Scatizzi** | *Sviluppatore Software/Hardware* |
 Componente 2:     |   **Niccolò Sbragi** | *Sviluppatore Software/Hardware e Designer* |
 Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
 
-| | Obbiettivi |
-| :---: | :--- |
-| ☐ | Progettare AI |
-| ☐ | Addestrare |
-| ☐ | Testing pc locale |
-| ☐ | Progettazione fisica |
-| ☐ | Trovare componenti |
-| ☐ | Implementazione fisica |
+| | Obbiettivi |                       
+| :---: | :--- |                       
+| ☐ | Progettare AI |                   
+| ☐ | Addestrare |                    
+| ☐ | Testing pc locale |              
+| ☐ | Progettazione fisica |           
+| ☐ | Trovare componenti |             
+| ☐ | Implementazione fisica |     
 | ☐ | Testing fisico |
 
 | | Idee Chiavi |
