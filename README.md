@@ -24,6 +24,15 @@ Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
 | ☐ | Implementazione fisica |
 | ☐ | Testing fisico |
 
+| | Idee Chiavi |
+| :---: | :--- |
+| ☐ | Parlare |
+| ☐ | Traking visivo |
+| ☐ | Riconoscimento suoni |
+| ☐ | Riconoscimento tocchi |
+| ☐ | Umorismo |
+| ☐ | Sentimenti |
+
 | Resources |  |
 | :--- | :--- |
 STT: | https://www.geeksforgeeks.org/python/python-convert-speech-to-text-and-text-to-speech/ |
