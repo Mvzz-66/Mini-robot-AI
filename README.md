@@ -14,6 +14,19 @@ Componente 1:     |   **Diego Scatizzi** | *Sviluppatore Software/Hardware* <br>
 Componente 2:     |   **Niccolò Sbragi** | *Sviluppatore Software/Hardware e Designer* <br>
 Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* <br>
 
+| Obbiettivi |  |
+| :--- | :--- |
+|  [ ]  | Progettare AI <br>
+|  [ ]  | Addestrare <br>
+|  [ ]  | Testing pc locale <br>
+|  [ ]  | Progettazione fisica <br>
+|  [ ]  | Trovare Componeneti <br>
+|  [ ]  | Implementazione fisica <br>
+|  [ ]  | Testing fisico <br>
+
+
+
+
 
 | Resources |  |
 | :--- | :--- |
@@ -23,4 +36,6 @@ LLM: | https://ollama.com/ <br>
  | | https://developers.openai.com/api/reference/resources/chat <br>
  | |  https://platform.openai.com/tokenizer <br>
 TTS: | https://pypi.org/project/TTS/ <br>
+
+
   
