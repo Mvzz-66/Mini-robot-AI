@@ -4,6 +4,7 @@
 
 import pyttsx3
 import speech_recognition as sr
+import robot.barin as brain
 
 
 class Voice:
@@ -33,14 +34,15 @@ class Voice:
         return None
 
     def speak(self, text):
-        """Legge ad alta voce il testo (la risposta dell'API)."""
+        """Legge ad alta voce il testo."""
+        if not text:
+            return
         self.engine.say(text)
         self.engine.runAndWait()
 
-    def risposta(self, text):
-        """Funzione che combina voiceRec e speak per ottenere una risposta vocale."""
-        domanda = self.voiceRec()
-        if domanda:
-            risposta = chiama_api(domanda)  # la tua funzione verso l'API
+    def risposta(self, domanda):
+        """Invia la domanda al modello e legge la risposta ad alta voce."""
+        risposta = brain.rispondi(domanda)
+        if risposta:
+            print("BMO:", risposta)
             self.speak(risposta)
-            
