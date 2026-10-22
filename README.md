@@ -16,7 +16,7 @@ Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
 
 | | Obbiettivi | Responsabile |
 | :---: | :--- | :--- |
-| ☑ | Chatbot da terminale | Massimiliano |
+| ☐ | Chatbot da terminale | Massimiliano |
 | ☐ | Progettare AI (personalità, umorismo, sentimenti) | Massimiliano |
 | ☐ | Addestrare / affinare le risposte | Massimiliano |
 | ☐ | Sviluppare i moduli (audio, visione, tocchi) | Diego, Gabriele |
