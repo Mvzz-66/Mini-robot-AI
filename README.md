@@ -33,6 +33,31 @@ Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
 | ☐ | Umorismo |
 | ☐ | Sentimenti |
 
+## Divisione del lavoro
+ 
+### Massimiliano: AI e coordinamento
+- Progettare l'AI (logica della conversazione, integrazione col modello Ollama)
+- Addestrare / definire la personalità
+- **Umorismo** e **Sentimenti**
+- Gestione del repo e integrazione finale dei moduli
+- Controllo compatibilità e budget della lista componenti
+### Diego: audio
+- **Parlare** (sintesi vocale, es. `pyttsx3`)
+- **Riconoscimento suoni** (voce con `SpeechRecognition`/`PyAudio` e rumori)
+- Testing pc locale della parte audio
+- Componenti hardware audio: microfono, speaker, amplificatore
+### Niccolò: progettazione fisica e design
+- **Progettazione fisica**: case, dimensioni, disposizione dei componenti, stampa 3D
+- Display e interfaccia / espressioni del viso
+- **Implementazione fisica** (assemblaggio)
+- Componenti: display, batteria, tasto accensione
+### Gabriele: visione e sensori
+- **Tracking visivo** (camera, riconoscimento volto/movimento, es. OpenCV + MediaPipe)
+- **Riconoscimento tocchi** (sensori touch/capacitivi)
+- Testing pc locale della parte visione/sensori
+- Componenti: camera, sensori, microcontrollore
+
+
 | Resources |  |
 | :--- | :--- |
 STT: | https://www.geeksforgeeks.org/python/python-convert-speech-to-text-and-text-to-speech/ |
