@@ -14,15 +14,18 @@ Componente 1:     |   **Diego Scatizzi** | *Sviluppatore Software/Hardware* |
 Componente 2:     |   **Niccolò Sbragi** | *Sviluppatore Software/Hardware e Designer* |
 Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
 
-| | Obbiettivi |                       
-| :---: | :--- |                       
-| ☐ | Progettare AI |                   
-| ☐ | Addestrare |                    
-| ☐ | Testing pc locale |              
-| ☐ | Progettazione fisica |           
-| ☐ | Trovare componenti |             
-| ☐ | Implementazione fisica |     
-| ☐ | Testing fisico |
+| | Obbiettivi | Responsabile |
+| :---: | :--- | :--- |
+| ☑ | Chatbot da terminale | Massimiliano |
+| ☐ | Progettare AI (personalità, umorismo, sentimenti) | Massimiliano |
+| ☐ | Addestrare / affinare le risposte | Massimiliano |
+| ☐ | Sviluppare i moduli (audio, visione, tocchi) | Diego, Gabriele |
+| ☐ | Testing pc locale | Tutti, ognuno sul proprio modulo |
+| ☐ | Integrare i moduli in un unico programma | Massimiliano |
+| ☐ | Trovare componenti e fare la lista con i costi | Tutti, ognuno per la propria area |
+| ☐ | Progettazione fisica (case, display) | Niccolò |
+| ☐ | Implementazione fisica (assemblaggio) | Niccolò, con tutti |
+| ☐ | Testing fisico | Tutti |
 
 | | Idee Chiavi |
 | :---: | :--- |
