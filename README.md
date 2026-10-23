@@ -87,7 +87,7 @@ Dopo l'installazione **chiudere e riaprire il terminale**.
 
 ```powershell
 git clone <url-del-repo>
-// su windows: git clone url-del-repo
+#su windows: git clone url-del-repo
 cd Mini-robot-AI
 ```
 
