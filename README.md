@@ -34,6 +34,16 @@ Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
 | ☐ | Umorismo |
 | ☐ | Sentimenti |
 
+## Milestone
+
+| | Milestone | Scadenza |
+| :---: | :--- | :---: |
+| ☐ | Base software pronta | 30/10 |
+| ☐ | Documentazione conclusa | 6/11 |
+| ☐ | Fine fase logica | 15/11 |
+| ☐ | Fine fase fisica | 25/11 |
+| ☐ | Consegna | 30/11 |
+
 ## Divisione del lavoro
  
 ### Massimiliano: AI e coordinamento
