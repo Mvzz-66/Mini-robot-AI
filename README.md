@@ -2,28 +2,23 @@
 
 ### **Gruppo Skynet** <br>
 
-### Obbiettivo: creare un piccolo compagno AI con cui chiacchierare. <br>
+### Obbiettivo: creare un piccolo compagno AI con cui interagire. <br>
 
 Questo repository contiene il codice sorgente e la documentazione.
 <br> <br>
 
-Capo Gruppo:  |   **Massimiliano Drago** | *Sviluppatore Software/Hardware* | 
-Componente 1:     |   **Diego Scatizzi** | *Sviluppatore Software/Hardware* |
-Componente 2:     |   **Niccolò Sbragi** | *Sviluppatore Software/Hardware e Designer* |
-Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
-
 | | Obbiettivi | Responsabile |
 | :---: | :--- | :--- |
-| ☐ | Chatbot da terminale | Massimiliano |
-| ☐ | Progettare AI (personalità, umorismo, sentimenti) | Massimiliano |
-| ☐ | Addestrare / affinare le risposte | Massimiliano |
-| ☐ | Sviluppare i moduli (audio, visione, tocchi) | Diego, Gabriele |
-| ☐ | Testing pc locale | Tutti, ognuno sul proprio modulo |
-| ☐ | Integrare i moduli in un unico programma | Massimiliano |
-| ☐ | Trovare componenti e fare la lista con i costi | Tutti, ognuno per la propria area |
-| ☐ | Progettazione fisica (case, display) | Niccolò |
-| ☐ | Implementazione fisica (assemblaggio) | Niccolò, con tutti |
-| ☐ | Testing fisico | Tutti |
+| ☐ | Chatbot da terminale | **Massimiliano** |
+| ☐ | Progettare AI (personalità, umorismo, sentimenti) | **Massimiliano** |
+| ☐ | Addestrare / affinare le risposte | **Massimiliano** |
+| ☐ | Sviluppare i moduli (audio, visione, tocchi) | **Diego, Gabriele** |
+| ☐ | Testing pc locale | **Tutti, ognuno sul proprio modulo** |
+| ☐ | Integrare i moduli in un unico programma | **Massimiliano** |
+| ☐ | Trovare componenti e fare la lista con i costi | **Tutti, ognuno per la propria area** |
+| ☐ | Progettazione fisica (case, display) | **Niccolò** |
+| ☐ | Implementazione fisica (assemblaggio) | **Niccolò, con tutti** |
+| ☐ | Testing fisico | **Tutti** |
 
 | | Idee Chiavi |
 | :---: | :--- |
