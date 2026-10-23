@@ -9,7 +9,7 @@ Questo repository contiene il codice sorgente e la documentazione.
 
 | | Obbiettivi | Responsabile |
 | :---: | :--- | :--- |
-| ☐ | Chatbot da terminale | **Massimiliano** |
+| ☑ | Chatbot da terminale | **Massimiliano** |
 | ☐ | Progettare AI (personalità, umorismo, sentimenti) | **Massimiliano** |
 | ☐ | Addestrare / affinare le risposte | **Massimiliano** |
 | ☐ | Sviluppare i moduli (audio, visione, tocchi) | **Diego, Gabriele** |
