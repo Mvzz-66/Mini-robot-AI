@@ -22,7 +22,7 @@ Questo repository contiene il codice sorgente e la documentazione.
 
 | | Idee Chiavi |
 | :---: | :--- |
-| ☐ | Parlare |
+| ☑ | Parlare |
 | ☐ | Traking visivo |
 | ☐ | Riconoscimento suoni |
 | ☐ | Riconoscimento tocchi |
