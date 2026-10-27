@@ -9,11 +9,12 @@ from input.voice import Voice
 if __name__ == "__main__":
     voice = Voice()
 
-while True:
-    domanda = voice.voiceRec() #Riconosce la voce
-    voice.risposta(domanda)    #genera la risposta
-    if not domanda:
-        continue
-    if "esci" in domanda:
-        break
+    while True:
+        domanda = voice.voiceRec() #Riconosce la voce
+        if not domanda:
+            continue
+        if "esci" in domanda:
+            break
+        risposta = voice.risposta(domanda)   # genera la risposta
+        voice.speak(risposta)                # la dice ad alta voce
     
