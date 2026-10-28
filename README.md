@@ -136,6 +136,14 @@ Sempre dalla cartella principale del progetto, con il venv attivo (nel prompt de
 python main.py
 ```
 
+## Installazione voci
+
+```powershell
+pip install piper-tts
+python -m piper.download_voices it_IT-serena-high
+```
+
+
 ### Problemi comuni
 
 | Errore | Soluzione |
