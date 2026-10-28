@@ -12,7 +12,7 @@ Questo repository contiene il codice sorgente e la documentazione.
 | ☑ | Chatbot da terminale | **Massimiliano** |
 | ☐ | Progettare AI (personalità, umorismo, sentimenti) | **Massimiliano** |
 | ☐ | Addestrare / affinare le risposte | **Massimiliano** |
-| ☐ | Sviluppare i moduli (audio, visione, tocchi) | **Diego, Gabriele** |
+| ☑ | Sviluppare i moduli (audio, visione, tocchi) | **Diego, Gabriele** |
 | ☐ | Testing pc locale | **Tutti, ognuno sul proprio modulo** |
 | ☐ | Integrare i moduli in un unico programma | **Massimiliano** |
 | ☐ | Trovare componenti e fare la lista con i costi | **Tutti, ognuno per la propria area** |
@@ -23,7 +23,7 @@ Questo repository contiene il codice sorgente e la documentazione.
 | | Idee Chiavi |
 | :---: | :--- |
 | ☑ | Parlare |
-| ☐ | Traking visivo |
+| ☑ | Traking visivo |
 | ☐ | Riconoscimento suoni |
 | ☐ | Riconoscimento tocchi |
 | ☐ | Umorismo |
