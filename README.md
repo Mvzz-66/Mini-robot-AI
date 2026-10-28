@@ -161,3 +161,5 @@ LLM: | https://ollama.com/ |
  | | https://developers.openai.com/api/reference/resources/chat |
  | |  https://platform.openai.com/tokenizer |
 TTS: | https://pypi.org/project/TTS/ |
+
+<img width="977" height="617" alt="image" src="https://github.com/user-attachments/assets/62df6b91-fe04-417a-8250-05f869ae0b56" />
