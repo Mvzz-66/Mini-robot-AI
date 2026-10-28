@@ -3,18 +3,19 @@
 # non c'è il microfono), la passa al "cervello" e fa rispondere il robot.
 # Il ciclo continua finché l'utente non dice "esci".
 
+
 from input.voice import Voice
 
 
 if __name__ == "__main__":
-    voice = Voice()
+    voice = Voice(model="it_IT-serena-high.onnx", pitch=1.5, speed=0.7)
 
     while True:
-        domanda = voice.voiceRec() #Riconosce la voce
+        domanda = voice.voiceRec()
         if not domanda:
             continue
         if "esci" in domanda:
             break
-        risposta = voice.risposta(domanda)   # genera la risposta
-        voice.speak(risposta)                # la dice ad alta voce
+        risposta = voice.risposta(domanda)
+        voice.speak(risposta)
     
