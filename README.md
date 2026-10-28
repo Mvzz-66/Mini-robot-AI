@@ -14,10 +14,10 @@ Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
 
 | | Obbiettivi | Responsabile |
 | :---: | :--- | :--- |
-| ☐ | Chatbot da terminale | Massimiliano |
+| ☑ | Chatbot da terminale | Massimiliano |
 | ☐ | Progettare AI (personalità, umorismo, sentimenti) | Massimiliano |
 | ☐ | Addestrare / affinare le risposte | Massimiliano |
-| ☐ | Sviluppare i moduli (audio, visione, tocchi) | Diego, Gabriele |
+| ☑ | Sviluppare i moduli (audio, visione, tocchi) | Diego, Gabriele |
 | ☐ | Testing pc locale | Tutti, ognuno sul proprio modulo |
 | ☐ | Integrare i moduli in un unico programma | Massimiliano |
 | ☐ | Trovare componenti e fare la lista con i costi | Tutti, ognuno per la propria area |
@@ -27,8 +27,8 @@ Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
 
 | | Idee Chiavi |
 | :---: | :--- |
-| ☐ | Parlare |
-| ☐ | Traking visivo |
+| ☑ | Parlare |
+| ☑ | Traking visivo |
 | ☐ | Riconoscimento suoni |
 | ☐ | Riconoscimento tocchi |
 | ☐ | Umorismo |
