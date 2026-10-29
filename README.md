@@ -9,6 +9,7 @@ Questo repository contiene il codice sorgente e la documentazione.
 
 | | Obbiettivi | Responsabile |
 | :---: | :--- | :--- |
+
 | ☑ | Chatbot da terminale | **Massimiliano** |
 | ☐ | Progettare AI (personalità, umorismo, sentimenti) | **Massimiliano** |
 | ☐ | Addestrare / affinare le risposte | **Massimiliano** |
@@ -140,6 +141,14 @@ Sempre dalla cartella principale del progetto, con il venv attivo (nel prompt de
 ```powershell
 python main.py
 ```
+
+## Installazione voci
+
+```powershell
+pip install piper-tts
+python -m piper.download_voices it_IT-serena-high
+```
+
 
 ### Problemi comuni
 
