@@ -2,28 +2,24 @@
 
 ### **Gruppo Skynet** <br>
 
-### Obbiettivo: creare un piccolo compagno AI con cui chiacchierare. <br>
+### Obbiettivo: creare un piccolo compagno AI con cui interagire. <br>
 
 Questo repository contiene il codice sorgente e la documentazione.
 <br> <br>
 
-Capo Gruppo:  |   **Massimiliano Drago** | *Sviluppatore Software/Hardware* | 
-Componente 1:     |   **Diego Scatizzi** | *Sviluppatore Software/Hardware* |
-Componente 2:     |   **Niccolò Sbragi** | *Sviluppatore Software/Hardware e Designer* |
-Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
-
 | | Obbiettivi | Responsabile |
 | :---: | :--- | :--- |
-| ☑ | Chatbot da terminale | Massimiliano |
-| ☐ | Progettare AI (personalità, umorismo, sentimenti) | Massimiliano |
-| ☐ | Addestrare / affinare le risposte | Massimiliano |
-| ☑ | Sviluppare i moduli (audio, visione, tocchi) | Diego, Gabriele |
-| ☐ | Testing pc locale | Tutti, ognuno sul proprio modulo |
-| ☐ | Integrare i moduli in un unico programma | Massimiliano |
-| ☐ | Trovare componenti e fare la lista con i costi | Tutti, ognuno per la propria area |
-| ☐ | Progettazione fisica (case, display) | Niccolò |
-| ☐ | Implementazione fisica (assemblaggio) | Niccolò, con tutti |
-| ☐ | Testing fisico | Tutti |
+
+| ☑ | Chatbot da terminale | **Massimiliano** |
+| ☐ | Progettare AI (personalità, umorismo, sentimenti) | **Massimiliano** |
+| ☐ | Addestrare / affinare le risposte | **Massimiliano** |
+| ☑ | Sviluppare i moduli (audio, visione, tocchi) | **Diego, Gabriele** |
+| ☐ | Testing pc locale | **Tutti, ognuno sul proprio modulo** |
+| ☐ | Integrare i moduli in un unico programma | **Massimiliano** |
+| ☐ | Trovare componenti e fare la lista con i costi | **Tutti, ognuno per la propria area** |
+| ☐ | Progettazione fisica (case, display) | **Niccolò** |
+| ☐ | Implementazione fisica (assemblaggio) | **Niccolò, con tutti** |
+| ☐ | Testing fisico | **Tutti** |
 
 | | Idee Chiavi |
 | :---: | :--- |
@@ -33,6 +29,16 @@ Componente 2:     |   **Gabriele Severi** | *Sviluppatore Software/Hardware* |
 | ☐ | Riconoscimento tocchi |
 | ☐ | Umorismo |
 | ☐ | Sentimenti |
+
+## Milestone
+
+| | Milestone | Scadenza |
+| :---: | :--- | :---: |
+| ☐ | Base software pronta | 30/10 |
+| ☐ | Documentazione conclusa | 6/11 |
+| ☐ | Fine fase logica | 15/11 |
+| ☐ | Fine fase fisica | 25/11 |
+| ☐ | Consegna | 30/11 |
 
 ## Divisione del lavoro
  
@@ -153,8 +159,6 @@ python -m piper.download_voices it_IT-serena-high
 | `model not found` | Eseguire `ollama pull <nome-modello>` con lo stesso nome usato nel codice. |
 | `No module named 'robot'` | Lanciare lo script dalla cartella principale (`python main.py`), non da una sottocartella. |
 | Nessun microfono / errori ALSA | Capita solo su Linux o Codespace: il test della voce va fatto su Windows in locale. |
-
-
 
 | Resources |  |
 | :--- | :--- |

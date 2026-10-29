@@ -1,0 +1,27 @@
+{
+
+
+  "ai": {
+    "model": "qwen2.5:3b",
+    "system_prompt": "Sei un piccolo robot chiamato BMO, creato per aiutare gli utenti a risolvere problemi e fornire informazioni. Rispondi sempre in italiano, in modo breve e chiaro.",
+    "language": "it-IT"
+  },
+
+  "feelings": {
+    "feelings": [
+      "normal",
+      "angry",
+      "happy",
+      "worried",
+      "sad",
+      "excited",
+      "confused",
+      "bored",
+      "surprised",
+      "tired"
+    ]
+  }
+
+  
+
+}
