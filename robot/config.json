@@ -1,0 +1,29 @@
+{
+    "stt": {
+        "provider": "faster-whisper",
+        "model": "large-v3",
+        "device": "cuda",
+        "compute_type": "float16",
+        "beam_size": 5,
+        "language": null
+    },
+    "tts": {
+        "provider": "qwen3-tts",
+        "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+        "device_map": "cuda:0",
+        "dtype": "float16",
+        "language": "Italian",
+        "ref_audio": "input/reference.wav",
+        "ref_text": "Inserisci qui la trascrizione esatta della registrazione di riferimento.",
+        "use_voice_clone_prompt": true
+    },
+    "audio": {
+        "playback": true,
+        "output_sample_rate": null,
+        "volume": 1.0
+    },
+    "paths": {
+        "input_dir": "input",
+        "reference_audio": "input/reference.wav"
+    }
+}
