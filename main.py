@@ -5,17 +5,19 @@
 
 
 from input.voice import Voice
+from robot import brain
 
 
 if __name__ == "__main__":
-    voice = Voice(model="it_IT-serena-high.onnx", pitch=1.5, speed=0.7)
+
+    voice = Voice()
 
     while True:
-        domanda = voice.voiceRec()
-        if not domanda:
-            continue
-        if "esci" in domanda:
+        domanda = voice.voiceRec("input\\speech.wav")
+
+        if domanda.lower() == "esci":
             break
-        risposta = voice.risposta(domanda)
+
+        risposta = brain.rispondi(domanda)
+
         voice.speak(risposta)
-    
