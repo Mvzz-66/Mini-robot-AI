@@ -1,6 +1,6 @@
 # Definisce la classe Voice con le funzioni STT (voiceRec) e TTS (speak).
-# voiceRec() riconosce la voce dell'utente; il testo viene passato all'API,
-# che genera la risposta, la quale viene letta ad alta voce da speak().
+# voiceRec() trascrive l'audio con faster-whisper; speak() legge il testo
+# ad alta voce con Piper (offline).
 
 import os
 import platform
@@ -9,8 +9,12 @@ import sys
 import tempfile
 import wave
 
-import speech_recognition as sr
-import robot.brain as brain
+import sounddevice as sd
+import soundfile as sf
+
+from faster_whisper import WhisperModel
+
+from robot.config import CONFIG
 
 
 def higher_pitch(src, dst, factor=1.25):
@@ -26,44 +30,60 @@ def higher_pitch(src, dst, factor=1.25):
 
 
 class Voice:
-    # Constructor
-    def __init__(self, language="it-IT", model="it_IT-serena-high.onnx", pitch=1.0, speed=1.0): #valori predefiniti
-        self.language = language
-        self.recogniser = sr.Recognizer()
-        self.model = model   # modello Piper da usare
-        self.pitch = pitch   # 1.0 = tono normale, più alto = più acuto
-        self.speed = speed   # 1.0 = velocità normale, sotto 1 = più lento
 
-    # Funzione responsabile al riconoscimento vocale
-    def voiceRec(self):
-        """Ascolta il microfono e restituisce il testo in minuscolo (o None)."""
-        try:
-            with sr.Microphone() as source:
-                print("Ascolto...")
-                self.recogniser.adjust_for_ambient_noise(source, duration=0.5)
-                audio = self.recogniser.listen(source, timeout=5, phrase_time_limit=15)
+    def __init__(self):
+        # Configurazione STT
+        stt = CONFIG["stt"]
+        self.whisper_model = WhisperModel(
+            stt["model"],
+            device=stt["device"],
+            compute_type=stt["compute_type"],
+        )
+        self.beam_size = stt["beam_size"]
+        self.language = stt.get("language")
 
-            text = self.recogniser.recognize_google(audio, language=self.language).lower()
-            print("Hai detto:", text)
-            return text
+        # Configurazione TTS (Piper)
+        tts = CONFIG["tts"]
+        self.piper_model = tts["piper_model"]
+        self.pitch = tts.get("pitch", 1.5)   # 1.0 = normale, più alto = più acuto
+        self.speed = tts.get("speed", 0.7)   # 1.0 = normale, sotto 1 = più lento
 
-        except OSError:
-            return input("(SOLO CODESPACE)Nessun microfono trovato, scrivi: ")
-        except sr.WaitTimeoutError:
-            print("Nessun suono rilevato")
-        except sr.UnknownValueError:
-            print("Non ho capito l'audio")
-        except sr.RequestError as e:
-            print(f"Errore richiesta al servizio: {e}")
-        return None
+    # -------------------------
+    # SPEECH TO TEXT
+    # -------------------------
+
+    def record_array(self, seconds=5, samplerate=16000):
+        """Registra dal microfono e restituisce un array 1D float32."""
+        print("Parla...")
+        audio = sd.rec(int(seconds * samplerate), samplerate=samplerate,
+                       channels=1, dtype="float32")
+        sd.wait()
+        return audio.flatten()
+
+    def voiceRec(self, audio):
+        """Trascrive un array numpy (o un file audio) in testo."""
+        segments, info = self.whisper_model.transcribe(
+            audio,
+            beam_size=self.beam_size,
+            language=self.language,
+        )
+        text = " ".join(segment.text for segment in segments)
+        print(
+            f"Detected language: {info.language} "
+            f"(probability: {info.language_probability:.2f})"
+        )
+        return text.strip()
+
+    # -------------------------
+    # TEXT TO SPEECH
+    # -------------------------
 
     def speak(self, text):
         """Legge ad alta voce il testo con Piper (offline)."""
         if not text:
-            return
-        tmp = tempfile.gettempdir()
-        wav = os.path.join(tmp, "bmo_tts.wav")
-        wav_bmo = os.path.join(tmp, "bmo_tts_pitch.wav")
+            return None
+
+        wav = os.path.join(tempfile.gettempdir(), "bmo_tts.wav")
 
         # Alzare il tono con il sample rate accelera anche la voce:
         # lo compensiamo rallentando la generazione di Piper.
@@ -71,29 +91,36 @@ class Voice:
 
         # 1. genera il file audio con Piper
         subprocess.run(
-            [sys.executable, "-m", "piper", "-m", self.model,
+            [sys.executable, "-m", "piper", "-m", self.piper_model,
              "--length-scale", str(length_scale), "-f", wav],
             input=text.encode("utf-8"),
             check=True,
         )
 
-        # 2. alza il tono solo se serve
-        if self.pitch != 1.0:
-            higher_pitch(wav, wav_bmo, self.pitch)
-        else:
-            wav_bmo = wav
+        # 2. legge il wav
+        audio, sr = sf.read(wav, dtype="float32")
 
-        # 3. riproduce il file
+        # 3. riproduce (volume + tono), con fallback di sistema
+        if CONFIG["audio"]["playback"]:
+            try:
+                audio_out = audio * CONFIG["audio"]["volume"]
+                sd.play(audio_out, int(sr * self.pitch))  # sample rate più alto = tono più acuto
+                sd.wait()
+            except Exception as e:
+                print(f"sounddevice non disponibile ({e}), uso il player di sistema")
+                self._play_system(wav)
+
+        return audio
+
+    def _play_system(self, wav):
+        """Fallback: riproduce il wav con winsound (Windows) o aplay (Linux)."""
+        wav_bmo = wav
+        if self.pitch != 1.0:
+            wav_bmo = os.path.join(tempfile.gettempdir(), "bmo_tts_pitch.wav")
+            higher_pitch(wav, wav_bmo, self.pitch)
+
         if platform.system() == "Windows":
             import winsound
             winsound.PlaySound(wav_bmo, winsound.SND_FILENAME)
         else:
             subprocess.run(["aplay", "-q", wav_bmo], check=True)
-
-    # Funzione responsabile alla generazione della risposta
-    def risposta(self, domanda):
-        """Invia la domanda al modello e restituisce la risposta."""
-        risposta = brain.rispondi(domanda)
-        if risposta:
-            print("BMO:", risposta)
-            return risposta
