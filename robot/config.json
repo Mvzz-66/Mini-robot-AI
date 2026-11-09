@@ -1,0 +1,30 @@
+{
+    "stt": {
+        "provider": "faster-whisper",
+        "model": "small",
+        "device": "cpu",
+        "compute_type": "int8",
+        "beam_size": 5,
+        "language": null
+    },
+    "tts": {
+        "provider": "piper",
+        "piper_model": "it_IT-serena-high.onnx",
+        "pitch": 1.3,
+        "speed": 0.7
+    },
+    "audio": {
+        "playback": true,
+        "output_sample_rate": null,
+        "volume": 1.0
+    },
+    "paths": {
+        "input_dir": "input",
+        "reference_audio": "input/reference.wav"
+    },
+    "ai": {
+        "model": "qwen3.5",
+        "system_prompt": "Sei un piccolo robot chiamato BMO, creato per aiutare gli utenti a risolvere problemi e fornire informazioni. Rispondi sempre in italiano, in massimo due frasi brevi. Non usare mai emoji, emoticon o simboli speciali: scrivi solo testo semplice.",
+        "vision_prompt": "Describe this person's face in max 6 words (expression, glasses, hair)."
+    }
+}
