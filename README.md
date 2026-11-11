@@ -33,7 +33,7 @@ Il README descrive la **fase locale su PC** (Windows).
 | ☐ | Testing PC locale | **Tutti, ognuno sul proprio modulo** |
 | ☐ | Integrare i moduli in un unico programma | **Massimiliano** |
 | ☐ | Trovare componenti e fare la lista con i costi | **Tutti, ognuno per la propria area** |
-| ☐ | Progettazione fisica (case, display) | **Niccolò** |
+| ☑ | Progettazione fisica (case, display) | **Niccolò** |
 | ☐ | Implementazione fisica (assemblaggio) | **Niccolò, con tutti** |
 | ☐ | Testing fisico | **Tutti** |
 
@@ -43,7 +43,7 @@ Il README descrive la **fase locale su PC** (Windows).
 | :---: | :--- |
 | ☑ | Parlare |
 | ☑ | Tracking visivo |
-| ☐ | Riconoscimento suoni |
+| ☑ | Riconoscimento suoni |
 | ☐ | Riconoscimento tocchi |
 | ☐ | Umorismo |
 | ☐ | Sentimenti |
