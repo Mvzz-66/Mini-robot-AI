@@ -112,6 +112,43 @@ class Voice:
 
         return audio
 
+    def synthesize(self, text):
+        """Genera il parlato con Piper e restituisce il percorso di un wav
+        (tono già alzato). Il chiamante deve cancellare il file."""
+        if not text:
+            return None
+
+        fd, raw = tempfile.mkstemp(suffix=".wav")
+        os.close(fd)
+        fd, out = tempfile.mkstemp(suffix=".wav")
+        os.close(fd)
+
+        try:
+            length_scale = self.pitch / self.speed
+
+            # 1. genera il wav con Piper
+            subprocess.run(
+                [sys.executable, "-m", "piper", "-m", self.piper_model,
+                 "--length-scale", str(length_scale), "-f", raw],
+                input=text.encode("utf-8"),
+                check=True,
+            )
+
+            # 2. alza il tono (stessa logica di speak, ma su file)
+            if self.pitch != 1.0:
+                higher_pitch(raw, out, self.pitch)
+            else:
+                os.replace(raw, out)
+        except Exception:
+            if os.path.exists(out):
+                os.remove(out)
+            raise
+        finally:
+            if os.path.exists(raw):
+                os.remove(raw)
+
+        return out
+
     def _play_system(self, wav):
         """Fallback: riproduce il wav con winsound (Windows) o aplay (Linux)."""
         wav_bmo = wav
