@@ -5,12 +5,9 @@ import unicodedata
 import cv2
 import dlib
 import ollama
-from robot.config import CONFIG
 
-ai = CONFIG["ai"]
-
-MODELLO = ai["model"]
-PROMPT = ai["vision_prompt"]
+MODELLO = "qwen3-vl:2b-instruct"   # più veloce: "qwen3-vl:2b-instruct"
+PROMPT = "Describe this person's face in max 6 words (expression, glasses, hair)."
 INTERVALLO = 5      # secondi minimi tra una richiesta e l'altra
 SCALA = 0.5         # riduzione del frame per dlib (più basso = più fps)
 
