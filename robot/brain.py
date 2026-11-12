@@ -2,16 +2,32 @@
 #  le funzioni di elaborazione del linguaggio naturale e integrazione llm locale con ollama.
 
 from ollama import chat #Impoto ollama (si deve scaricare in locale il modello)
+from robot.config import CONFIG
+import re
 
-MODEL = "llama3.2"  # modello usato per le risposte (scaricalo con: ollama pull llama3.2)
+AI_CONF= CONFIG["ai"]
 
-SYSTEM_PROMPT = (
-    "Sei un piccolo robot chiamato BMO, creato per aiutare gli utenti "
-    "a risolvere problemi e fornire informazioni. Rispondi sempre in italiano, "
-    "in modo breve e chiaro."
+MODEL = AI_CONF["model"]  # modello usato per le risposte 
+SYSTEM_PROMPT = AI_CONF["system_prompt"]
+
+EMOJI = re.compile(
+    "["
+    "\U0001F300-\U0001FAFF"   # emoji e pittogrammi
+    "\U00002600-\U000027BF"   # simboli vari e dingbats
+    "\U0001F000-\U0001F2FF"   # carte, mahjong, lettere cerchiate
+    "\U0000FE0F"              # selettore di variante
+    "\U0000200D"              # zero-width joiner
+    "]+",
+    flags=re.UNICODE,
 )
 
 storia = [{"role": "system", "content": SYSTEM_PROMPT}] #Cronologia della conversazione
+
+
+def pulisci(testo):
+    testo = EMOJI.sub("", testo)
+    testo = testo.replace("*", "")      # toglie anche il grassetto markdown
+    return re.sub(r"\s+", " ", testo).strip()
 
 
 def rispondi(domanda):
@@ -20,7 +36,8 @@ def rispondi(domanda):
         return None
 
     storia.append({"role": "user", "content": domanda})     #Si aggiunge allo storico la domanda dell'utente
-    risposta = chat(model=MODEL, messages=storia)           #Genera la risposta
-    testo = risposta.message.content
+    risposta = chat(model=MODEL, messages=storia, think=False,
+                  options={"num_predict": 80}, keep_alive="30m")
+    testo = pulisci(risposta.message.content)
     storia.append({"role": "assistant", "content": testo})  #Si aggiunge la domanda allo storico
     return testo

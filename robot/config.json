@@ -1,0 +1,39 @@
+{
+    "stt": {
+        "provider": "faster-whisper",
+        "model": "small",
+        "device": "cpu",
+        "compute_type": "int8",
+        "beam_size": 5,
+        "language": null
+    },
+    "tts": {
+        "provider": "piper",
+        "piper_model": "it_IT-serena-high.onnx",
+        "pitch": 1.3,
+        "speed": 1.0
+    },
+    "audio": {
+        "playback": true,
+        "output_sample_rarte": null,
+        "volume": 1.0
+    },
+    "paths": {
+        "input_dir": "input",
+        "reference_audio": "input/reference.wav"
+    },
+    "ai": {
+        "model": "qwen3.5:4b",
+        "system_prompt": "Sei un piccolo robot chiamato BMO, creato per aiutare gli utenti a risolvere problemi e fornire informazioni. Rispondi sempre in italiano, in massimo due frasi brevi. Non usare mai emoji, emoticon o simboli speciali: scrivi solo testo semplice.",
+        "vision_prompt": "Describe this person's face in max 6 words (expression, glasses, hair)."
+    },
+    "emotion": {
+        "happyness": "quando si risolve un problema, si trova una soluzione a qualcosa, si scherza o qualcuno ti saluta.",
+        "curiosity": "quando qualcuno ti dice qualcosa di nuovo che non conosci o non capisci.",
+        "sadness": "quando senti parole dure o cattive.",
+        "surprise": "quando succede qualcosa di inatteso.",
+        "bored": "quando non succede nulla da un po' o chi ti parla ti annoia.",
+        "pride": "quando riesci a fare qualcosa di nuovo.",
+        "anger": "se vieni trattato male senza motivo o con insistenza."
+    }
+}
