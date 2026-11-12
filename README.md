@@ -8,7 +8,7 @@ Questo repository contiene il codice sorgente e la documentazione.
 <br> <br>
 
 | | Obbiettivi | Responsabile |
-| :---: | :--- | :--- |
+| :--- | :--- | :--- |
 
 | ☑ | Chatbot da terminale | **Massimiliano** |
 | ☐ | Progettare AI (personalità, umorismo, sentimenti) | **Massimiliano** |
