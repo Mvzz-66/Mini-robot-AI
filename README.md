@@ -7,9 +7,8 @@
 Questo repository contiene il codice sorgente e la documentazione.
 <br> <br>
 
-| | Obbiettivi | Responsabile |
-| :--- | :--- | :--- |
-
+| | Obiettivo | Responsabile |
+| :---: | :--- | :--- |
 | ☑ | Chatbot da terminale | **Massimiliano** |
 | ☐ | Progettare AI (personalità, umorismo, sentimenti) | **Massimiliano** |
 | ☐ | Addestrare / affinare le risposte | **Massimiliano** |
@@ -20,6 +19,8 @@ Questo repository contiene il codice sorgente e la documentazione.
 | ☐ | Progettazione fisica (case, display) | **Niccolò** |
 | ☐ | Implementazione fisica (assemblaggio) | **Niccolò, con tutti** |
 | ☐ | Testing fisico | **Tutti** |
+
+
 
 | | Idee Chiavi |
 | :---: | :--- |
