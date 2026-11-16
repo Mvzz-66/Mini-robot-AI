@@ -77,7 +77,7 @@ Questo repository contiene il codice sorgente e la documentazione.
 
 ## Architettura
 
-![Schema dell'architettura](docs/architettura.png)
+![Schema dell'architettura](img/architettura.png)
 
 Il sistema è diviso in tre blocchi:
 
