@@ -15,4 +15,4 @@ while True:
 
     risposta = brain.rispondi(domanda)
     print("BMO:", risposta)
-    voice.speak(risposta)
+    voice.speak(risposta) 

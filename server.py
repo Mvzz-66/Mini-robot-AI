@@ -1,8 +1,4 @@
-# main.py
-# Punto di ingresso del robot: ascolta una domanda a voce (o da tastiera se
-# non c'è il microfono), la passa al "cervello" e fa rispondere il robot.
-# Il ciclo continua finché l'utente non dice "esci".
-
+# server.py
 
 import os
 import secrets
@@ -31,7 +27,7 @@ def check_key(x_api_key: str = Header(default="")):
         raise HTTPException(status_code=401, detail="API key non valida")
 
 
-@app.post("/talk", dependencies=[Depends(check_key)])
+@app.post("/talk", dependencies=[Depends(check_key)])                   
 def talk(file: UploadFile = File(...)):
     # 1. salva il wav ricevuto
     fd, in_path = tempfile.mkstemp(suffix=".wav")
@@ -57,5 +53,6 @@ def talk(file: UploadFile = File(...)):
     return FileResponse(
         out_path,
         media_type="audio/wav",
+        filename="risposta.wav",
         background=BackgroundTask(os.remove, out_path),
-    ) 
+    )
