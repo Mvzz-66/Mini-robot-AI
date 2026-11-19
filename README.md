@@ -1,4 +1,4 @@
-# Progetto-AI-Robottino
+# Mini-robot-AI
 
 ### Gruppo Skynet
 
@@ -28,9 +28,9 @@ Il README descrive la **fase locale su PC** (Windows).
 | :---: | :--- | :--- |
 | ☑ | Chatbot da terminale | **Massimiliano** |
 | ☑ | Sviluppare i moduli (audio, visione, tocchi) | **Diego, Gabriele** |
-| ☐ | Progettare AI (personalità, umorismo, sentimenti) | **Massimiliano** |
-| ☐ | Addestrare / affinare le risposte | **Massimiliano** |
-| ☐ | Testing PC locale | **Tutti, ognuno sul proprio modulo** |
+| ☑ | Progettare AI (personalità, umorismo, sentimenti) | **Diego** |
+| ☑ | Addestrare / affinare le risposte | **Massimiliano** |
+| ☑ | Testing PC locale | **Tutti, ognuno sul proprio modulo** |
 | ☐ | Integrare i moduli in un unico programma | **Massimiliano** |
 | ☐ | Trovare componenti e fare la lista con i costi | **Tutti, ognuno per la propria area** |
 | ☑ | Progettazione fisica (case, display) | **Niccolò** |
@@ -44,9 +44,8 @@ Il README descrive la **fase locale su PC** (Windows).
 | ☑ | Parlare |
 | ☑ | Tracking visivo |
 | ☑ | Riconoscimento suoni |
-| ☐ | Riconoscimento tocchi |
-| ☐ | Umorismo |
-| ☐ | Sentimenti |
+| ☑ | Umorismo |
+| ☑ | Sentimenti |
 
 ## Milestone
 
@@ -102,6 +101,8 @@ Per ora il progetto usa le librerie seguenti. Alcune verranno sostituite con alt
 ---
 
 ## Installazione (Windows)
+
+> Queste istruzioni riguardano la **fase locale su PC** (test dei moduli sul proprio computer). Nell'architettura con server FastAPI, STT, LLM e TTS sono quelli indicati nella sezione Architettura (faster-whisper, qwen3.5:4b, Piper).
 
 I comandi vanno eseguiti in **PowerShell** o nel **Prompt dei comandi**.
 
@@ -163,7 +164,7 @@ ollama pull qwen2.5:1.5b
 ollama list
 ```
 
-Il nome del modello deve coincidere con quello usato in `robot/brain.py`.
+Il nome del modello deve coincidere con quello usato in `robot/brain.py`. Per il modello del branch `Status` si usa `ollama pull qwen3.5:4b`.
 
 Per verificare che Ollama sia attivo:
 
@@ -185,9 +186,14 @@ Sempre dalla cartella principale del progetto, con il venv attivo (nel prompt de
 python main.py
 ```
 
----
+### Installazione voci (Piper)
 
-## Problemi comuni
+```powershell
+pip install piper-tts
+python -m piper.download_voices it_IT-serena-high
+```
+
+### Problemi comuni
 
 | Errore | Soluzione |
 | :--- | :--- |
