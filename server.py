@@ -27,7 +27,7 @@ def check_key(x_api_key: str = Header(default="")):
         raise HTTPException(status_code=401, detail="API key non valida")
 
 
-@app.post("/talk", dependencies=[Depends(check_key)])                   
+@app.post("/talk", dependencies=[Depends(check_key)])
 def talk(file: UploadFile = File(...)):
     # 1. salva il wav ricevuto
     fd, in_path = tempfile.mkstemp(suffix=".wav")
@@ -44,15 +44,22 @@ def talk(file: UploadFile = File(...)):
     if not domanda:
         return Response(status_code=204)  # nessun parlato rilevato
 
-    # 3. LLM
-    risposta = brain.rispondi(domanda)
-    print("BMO:", risposta)
+    # 3. LLM: testo + stato emotivo + intensità
+    risultato = brain.rispondi_completo(domanda)
+    risposta = risultato["content"]
+    stato = risultato["state"]            # idle, happy, curious, sad, ...
+    intensita = risultato["intensity"]    # lieve, media, forte
+    print(f"BMO: {risposta} | stato: {stato} ({intensita})")
 
     # 4. TTS e invio del wav (poi viene cancellato)
+    #    stato e intensità viaggiano negli header, il client cambia il volto
     out_path = voice.synthesize(risposta)
     return FileResponse(
         out_path,
         media_type="audio/wav",
-        filename="risposta.wav",
+        headers={
+            "X-AI-State": stato,
+            "X-AI-Intensity": intensita,
+        },
         background=BackgroundTask(os.remove, out_path),
     )
