@@ -193,6 +193,19 @@ pip install piper-tts
 python -m piper.download_voices it_IT-serena-high
 ```
 
+### Funzionamento sprite volto
+
+```powershell
+pip install pillow
+```
+
+### Lettura batteria del dispositivo
+
+
+```powershell
+pip install psutil
+```
+
 ### Problemi comuni
 
 | Errore | Soluzione |
