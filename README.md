@@ -31,8 +31,8 @@ Il README descrive la **fase locale su PC** (Windows).
 | ☑ | Progettare AI (personalità, umorismo, sentimenti) | **Diego** |
 | ☑ | Addestrare / affinare le risposte | **Massimiliano** |
 | ☑ | Testing PC locale | **Tutti, ognuno sul proprio modulo** |
-| ☐ | Integrare i moduli in un unico programma | **Massimiliano** |
-| ☐ | Trovare componenti e fare la lista con i costi | **Tutti, ognuno per la propria area** |
+| ☑ | Integrare i moduli in un unico programma | **Massimiliano** |
+| ☑ | Trovare componenti e fare la lista con i costi | **Tutti, ognuno per la propria area** |
 | ☑ | Progettazione fisica (case, display) | **Niccolò** |
 | ☐ | Implementazione fisica (assemblaggio) | **Niccolò, con tutti** |
 | ☐ | Testing fisico | **Tutti** |
@@ -42,7 +42,6 @@ Il README descrive la **fase locale su PC** (Windows).
 | | Idea |
 | :---: | :--- |
 | ☑ | Parlare |
-| ☑ | Tracking visivo |
 | ☑ | Riconoscimento suoni |
 | ☑ | Umorismo |
 | ☑ | Sentimenti |
@@ -53,7 +52,7 @@ Il README descrive la **fase locale su PC** (Windows).
 | :---: | :--- | :---: |
 | In conlusione | Base software | 30/10 |
 | ☐ | Documentazione conclusa | 6/11 |
-| ☐ | Fine fase logica | 15/11 |
+| ☑ | Fine fase logica | 15/11 |
 | ☐ | Fine fase fisica | 25/11 |
 | ☐ | Consegna | 30/11 |
 
